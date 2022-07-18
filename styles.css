@@ -166,3 +166,37 @@ main {
   display: grid;
   place-items: center;
 }
+
+/* HEADER */
+#header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--clr-black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* LOGO */
+
+.logo {
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  /* justify-content: flex-end; */
+  overflow: auto;
+  /* position: fixed; */
+}
+
+li {
+  padding: 2.5rem 1.5rem;
+}
+li a {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: #ffdf00;
+}

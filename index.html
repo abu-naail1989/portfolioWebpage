@@ -18,10 +18,15 @@
   <body>
     <header id="header">
       <!-- LOGO -->
-      <img src="./img/logo_200x200.png" alt="logo" id="header-img" />
+      <img
+        src="./img/logo_200x200.png"
+        class="logo"
+        alt="logo"
+        id="header-img"
+      />
       <!-- NAVBAR -->
       <nav id="nav-bar">
-        <ul>
+        <ul class="navbar">
           <li>
             <a href="#home" class="nav-link">home</a>
           </li>
@@ -37,13 +42,17 @@
         </ul>
       </nav>
     </header>
-    <form action="https://www.freecodecamp.com/email-submit" id="form">
-      <input
-        type="email"
-        placeholder="Enter your email address"
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-      />
-      <input type="submit" />
-    </form>
+    <main>
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+        <input type="submit" name="submit" id="submit" />
+      </form>
+    </main>
   </body>
 </html>
