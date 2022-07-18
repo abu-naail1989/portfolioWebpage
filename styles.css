@@ -44,6 +44,7 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-gold: #c59d5f;
   --clr-black: #222;
+  --clr-yellow: #ffdf00;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -165,6 +166,7 @@ main {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background: var(--clr-gold);
 }
 
 /* HEADER */
@@ -187,9 +189,7 @@ main {
 
 .navbar {
   display: flex;
-  /* justify-content: flex-end; */
   overflow: auto;
-  /* position: fixed; */
 }
 
 li {
@@ -197,6 +197,100 @@ li {
 }
 li a {
   text-transform: capitalize;
-  font-size: 1rem;
-  color: #ffdf00;
+  font-size: 1.5rem;
+  color: var(--clr-yellow);
+  font-family: var(--ff-primary);
+}
+
+/* CIRCLE */
+svg {
+  width: 150px;
+  height: 150px;
+}
+circle {
+  fill: none;
+  stroke-width: 4;
+  stroke: #ffc114;
+  stroke-linecap: round;
+
+  animation: loader 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+circle:nth-child(1) {
+  stroke: red;
+  stroke-dasharray: 50;
+  animation-delay: 0.2s;
+}
+circle:nth-child(2) {
+  stroke: yellow;
+  stroke-dasharray: 100;
+  animation-delay: 0.4s;
+}
+circle:nth-child(3) {
+  stroke: green;
+  stroke-dasharray: 180;
+  animation-delay: 0.6s;
+}
+
+circle:nth-child(4) {
+  stroke: violet;
+  stroke-dasharray: 350;
+  stroke-dashoffset: -100;
+  animation-delay: 0.8s;
+}
+
+#form {
+  position: relative;
+}
+
+#email {
+  padding: 6px 15px;
+  border-radius: 6px 3px;
+}
+input::placeholder {
+  color: var(--clr-gold);
+}
+/* SWITCH */
+.switch-btn {
+  position: absolute;
+  bottom: 0;
+  left: 102%;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  border-radius: var(--radius);
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  transition: var(--transition);
+}
+.switch-btn span {
+  display: inline-block;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: var(--clr-black);
+  font-weight: 700;
+}
+.switch {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clr-black);
+  border-radius: var(--radius);
+  margin: 0;
+  display: block;
+  transition: var(--transition);
+}
+.slide .switch {
+  left: 50%;
+}
+
+@keyframes loader {
+  50% {
+    transform: rotate(360deg);
+    transform-origin: center center;
+  }
 }

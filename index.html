@@ -41,8 +41,19 @@
           </li>
         </ul>
       </nav>
+      <!-- END OF NAV -->
     </header>
+    <!-- END OF HEADER -->
     <main>
+      <!-- svg circle -->
+      <svg>
+        <circle cx="75" cy="75" r="20"></circle>
+        <circle cx="75" cy="75" r="35"></circle>
+        <circle cx="75" cy="75" r="50"></circle>
+        <circle cx="75" cy="75" r="65"></circle>
+      </svg>
+
+      <!-- FORM -->
       <form action="https://www.freecodecamp.com/email-submit" id="form">
         <input
           id="email"
@@ -51,7 +62,12 @@
           placeholder="Enter your email address"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         />
-        <input type="submit" name="submit" id="submit" />
+        <!-- <input type="submit" class="switch-btn" name="submit" id="submit" /> -->
+        <button class="switch-btn">
+        <span></span>
+        <span>submit</span>
+        <span class="switch">/span>
+        </button>
       </form>
     </main>
   </body>
