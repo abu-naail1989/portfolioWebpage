@@ -204,7 +204,7 @@ li a {
 
 /* CIRCLE */
 svg {
-    margin-top: 50px;
+  margin-top: 100px;
   width: 150px;
   height: 150px;
 }
@@ -262,7 +262,7 @@ input::placeholder {
 .switch-btn {
   position: absolute;
   bottom: 0;
-  left: 102%;
+  left: 82%;
   width: 7rem;
   height: 2rem;
   display: flex;
@@ -295,10 +295,74 @@ input::placeholder {
 .slide .switch {
   left: 50%;
 }
+#submit {
+  z-index: -2;
+  visibility: hidden;
+}
+/* SPIDER */
+.fa-spider {
+  font-size: 5rem;
+  color: var(--clr-yellow);
+  animation: crawl 10s linear infinite;
+}
 
+/* PROJECTS SECTION  */
+.projects-section {
+  background: #45567d;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  column-gap: 50px;
+  row-gap: 50px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.project-title {
+  background-color: var(--clr-black);
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+}
+.project-image {
+  height: 300px;
+  object-fit: cover;
+}
+
+.code {
+  color: var(--clr-black);
+}
+.project-tile:hover .code {
+  color: #ffdf00;
+}
 @keyframes loader {
   50% {
     transform: rotate(360deg);
     transform-origin: center center;
+  }
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateX(100px);
+    color: red;
+  }
+  25% {
+    transform: translateY(-50px);
+    color: yellow;
+  }
+  50% {
+    transform: translateX(-100px);
+    color: green;
+  }
+  75% {
+    transform: translateY(50px);
+    color: blue;
+  }
+  100% {
+    transform: translateX(100px);
+    color: var(--clr-black);
   }
 }
