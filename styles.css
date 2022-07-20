@@ -349,8 +349,44 @@ input::placeholder {
 .btn-show-all {
   display: block;
   max-width: 150px;
-  margin: 0 auto;
+  margin: auto;
   font-family: var(--ff-primary);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  background: var(--clr-gold);
+  height: 400px;
+}
+.contact-section-header h2 {
+  width: 100%;
+  max-width: 45%;
+  margin: 2rem auto;
+  padding: 3rem 0;
+  font-family: "Cedarville Cursive";
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+}
+.contact-details {
+  color: var(--clr-black);
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+/* FOOTER */
+footer {
+  background: var(--clr-black);
+}
+footer p {
+  width: 620px;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 1.1rem;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-family: var(--ff-secondary);
 }
 @keyframes loader {
   50% {
