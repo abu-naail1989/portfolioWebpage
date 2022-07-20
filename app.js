@@ -22,3 +22,22 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fixed-header");
   }
 });
+
+const scrollLinks = document.querySelectorAll(".scroll-link");
+
+scrollLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    console.log(id);
+    element = document.getElementById(id);
+    const headerHeight = header.getBoundingClientRect().height;
+    const fixedHeader = header.classList.contains(".fixed-header");
+    let position = element.offsetTop - headerHeight;
+
+    if (!fixedHeader) {
+      position = position - headerHeight;
+    }
+    window.scrollTo({ left: 0, top: position });
+  });
+});
